@@ -1,14 +1,6 @@
-require 'dry/monads'
-
 module Scenarios
   module Stocks
-    class Update
-      include Dry::Monads[:result]
-
-      def self.call(params)
-        new.call(params)
-      end
-
+    class Update < Base
       def call(params)
         Forms::Stocks::Update.call(params).bind do |data|
           stock         = Queries::Stocks.get_by(id: data[:id])

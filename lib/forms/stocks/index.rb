@@ -1,10 +1,6 @@
-require 'dry/monads'
-
 module Forms
   module Stocks
-    class Index
-      include Dry::Monads[:result]
-
+    class Index < Base
       def call(params)
         validate_params(params)
       end

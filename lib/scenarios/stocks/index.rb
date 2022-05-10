@@ -1,10 +1,6 @@
-require 'dry/monads'
-
 module Scenarios
   module Stocks
-    class Index
-      include Dry::Monads[:result]
-
+    class Index < Base
       def self.call
         new.call
       end

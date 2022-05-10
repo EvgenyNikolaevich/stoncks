@@ -1,14 +1,6 @@
-require 'dry/monads'
-
 module Forms
   module Stocks
-    class Create
-      include Dry::Monads[:result]
-
-      def self.call(params)
-        new.call(params)
-      end
-
+    class Create < Base
       def call(params)
         validate_params(params)
       end
