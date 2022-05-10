@@ -11,6 +11,7 @@ module Queries
 
       def update(stock, data:)
         stock.update(data)
+        stock
       end
 
       def soft_delete_by(id:)

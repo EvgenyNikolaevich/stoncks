@@ -1,5 +1,3 @@
-# README
-
 # Run app
 
 Create role in DB:
